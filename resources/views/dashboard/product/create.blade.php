@@ -64,7 +64,7 @@
                <div class="form-group">
                 <label for="">Description uzb</label>
                 <textarea name="description_uz" id="description_uz" cols="30" rows="10">{{old("description_uz")}}</textarea>
-               @error('description_uz')
+                @error('description_uz')
                      <div class="alert alert-danger">{{ $message }}</div>
                  @enderror
                </div>

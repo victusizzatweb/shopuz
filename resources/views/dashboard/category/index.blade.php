@@ -27,18 +27,18 @@
                 <td>{{$category->name_uz}}</td>
                 <td>{{$category->name_ru}}</td>
                 <td>{{$category->status}}</td>
-                <td>
+                <td style="display: flex">
+                  
                   <div class="btn-group">
                     <a href="{{route("category.edit", $category->id )}}" class="btn btn-primary">
                       <i class="fa fa-edit"></i>
                     </a>
-                    <form action="{{route("category.destroy", $category->id )}}" method="POST">
-                      @csrf
-                      @method('delete')
-                      <button onclick="return confirm('Are you sure you want  to delete? ')" class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>
-                    </form>
                   </div>
-                 
+                  <form action="{{route("category.destroy", $category->id )}}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button onclick="return confirm('Are you sure you want  to delete? ')" class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>
+                  </form>
                 </td>
               </tr>
                 
